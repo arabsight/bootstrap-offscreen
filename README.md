@@ -16,11 +16,17 @@ To use it, simply include its CSS and JavaScript in your HTML. You can find the 
 <!-- In <head> after the Bootstrap CSS. -->
 <link
   rel="stylesheet"
-  href="https://unpkg.com/arabsight/bootstrap-offscreen/dist/bootstrap-offscreen.css"
+  href="https://unpkg.com/bootstrap-offscreen/dist/bootstrap-offscreen.css"
 />
 
 <!-- At the end of <body>, after jQuery and the Bootstrap js -->
-<script src="https://unpkg.com/arabsight/bootstrap-offscreen/dist/bootstrap-offscreen.js"></script>
+<script src="https://unpkg.com/bootstrap-offscreen/dist/bootstrap-offscreen.js"></script>
+```
+
+Or use npm:
+
+```
+npm i bootstrap-offscreen
 ```
 
 Once the JavaScript is included in the page the library is automatically enabled. A new off-screen menu is added to the HTML, which is synced with the contents of your navbar automatically.
