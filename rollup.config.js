@@ -4,7 +4,7 @@ export default {
   input: "src/bootstrap-offscreen.js",
   output: {
     file: "dist/bootstrap-offscreen.js",
-    format: "iife"
+    format: "iife",
   },
-  plugins: [terser()]
+  plugins: [terser()],
 };
