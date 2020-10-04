@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   const body = $("body");
   const navbar = $(".navbar");
   const navbarCollapse = $(".navbar-collapse");
@@ -24,7 +24,7 @@ $(function() {
   }
 
   // This event is trigerred when the user clicks the navbar toggle button.
-  navbarCollapse.on("show.bs.collapse", function(e) {
+  navbarCollapse.on("show.bs.collapse", function (e) {
     // Stop the default navbar behaviour (don't open the collapse navigation).
     e.preventDefault();
 
@@ -37,13 +37,13 @@ $(function() {
   });
 
   // Hide the menu when the "x" button is clicked.
-  sideMenuCloseBtn.on("click", function(e) {
+  sideMenuCloseBtn.on("click", function (e) {
     e.preventDefault();
     slideOut();
   });
 
   // Hide the menu when the overlay element is clicked.
-  overlay.on("click", function(e) {
+  overlay.on("click", function (e) {
     slideOut();
   });
 
@@ -51,7 +51,7 @@ $(function() {
   // If the original navbar collapse is visible then the nav is expanded.
   // Hide/Show the menu accordingly.
 
-  $(window).resize(function() {
+  $(window).resize(function () {
     if (!navbarCollapse.is(":visible") && body.hasClass("side-menu-visible")) {
       sideMenu.show();
       overlay.show();
@@ -64,7 +64,7 @@ $(function() {
   function slideIn() {
     body.addClass("overflow-hidden");
     sideMenu.show();
-    setTimeout(function() {
+    setTimeout(function () {
       body.addClass("side-menu-visible");
       overlay.fadeIn && overlay.fadeIn();
     }, 50);
@@ -73,7 +73,7 @@ $(function() {
   function slideOut() {
     body.removeClass("side-menu-visible");
     overlay.fadeOut && overlay.fadeOut();
-    setTimeout(function() {
+    setTimeout(function () {
       sideMenu.hide();
       body.removeClass("overflow-hidden");
     }, 400);
